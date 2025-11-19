@@ -63,6 +63,22 @@ VCHOP/
 - Additional theme presets (e.g., AMOLED, sepia).
 - Telemetry-free analytics (purely local logs) to surface blocked request counts.
 
+## Important Disclaimer: VCHOP's Purpose and Ethical Use
+
+VCHOP is a browser extension developed for personal privacy enhancement and user experience customization on the vtop.vitbhopal.ac.in college portal. We want to be absolutely clear about its intent and functionality:
+
+1. Client-Side Operation Only: VCHOP operates exclusively within your web browser. It modifies what you see on your screen and how your browser interacts with network requests to display content. It does NOT interact with, modify, store, or transmit any data on the college's servers. Your academic records, personal information, or any server-side data remain untouched.
+
+2. Privacy-Focused: The primary function of VCHOP is to prevent the display of your CGPA on your personal dashboard. This is a privacy feature, ensuring that sensitive academic information is not inadvertently exposed to others who might view your screen.
+
+3. User Experience Enhancement: The Dark Mode feature is solely for aesthetic preference and to reduce eye strain, enhancing your personal browsing experience on the portal.
+No Unauthorized Access or Manipulation: VCHOP does NOT bypass any security measures, gain unauthorized access to information, or alter any grades, credentials, or official data. It does NOT perform any actions that could be considered hacking, exploiting vulnerabilities, or malicious interference with the college's systems.
+
+4. Adherence to College Policies: While VCHOP modifies your personal browsing experience, it is designed with respect for the college's digital environment. It aims to be a silent, unobtrusive tool that simply gives you more control over your own view of the portal.
+Your Responsibility: By installing and using VCHOP, you acknowledge that you are choosing to customize your personal browser's interaction with the college portal. You are responsible for understanding how browser extensions work and their impact on your own browsing experience.
+
+In essence, VCHOP acts as a personal screen filter and content blocker, empowering you to control how the portal's information is presented to you, without any intent or capability to harm, compromise, or misuse the college's systems or data.
+
 ## License
 
 MIT © sodiumcyanide
