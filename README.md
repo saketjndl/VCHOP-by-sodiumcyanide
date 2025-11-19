@@ -8,6 +8,8 @@
 
 VCHOP is a Manifest V3 browser extension designed for the VIT Bhopal portal (`vtop.vitbhopal.ac.in`). It blocks the CGPA dashboard API request, hides any fallback widgets that expose CGPA/CREDIT data, and gives you a persistent dark mode that activates instantly on every page load.
 
+## Please ⭐ the repository if you liked the project. Thank You!
+
 ## Features
 
 - **CGPA Request Blocking** – Uses Declarative Net Request rules to stop `vtop/get/dashboard/current/cgpa/credits` from ever reaching the server.
