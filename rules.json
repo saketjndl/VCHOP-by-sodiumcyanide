@@ -1,0 +1,16 @@
+[
+  {
+    "id": 1,
+    "priority": 1,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "/vtop/get/dashboard/current/cgpa/credits",
+      "resourceTypes": [
+        "xmlhttprequest"
+      ]
+    }
+  }
+]
+

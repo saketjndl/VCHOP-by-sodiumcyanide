@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>VCHOP</title>
+    <style>
+      :root {
+        color-scheme: dark;
+      }
+      body {
+        margin: 0;
+        padding: 24px 22px;
+        width: 320px;
+        height: 240px;
+        font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+          "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
+          "Segoe UI Symbol", "Noto Color Emoji";
+        background: linear-gradient(165deg, #0b0d18 0%, #12152a 55%, #1c1f37 100%);
+        color: #f5f6ff;
+        display: flex;
+        align-items: stretch;
+        justify-content: center;
+      }
+      .surface {
+        width: 100%;
+        border-radius: 20px;
+        padding: 26px 24px;
+        background: rgba(18, 21, 41, 0.92);
+        backdrop-filter: blur(14px);
+        box-shadow: 0 25px 60px rgba(5, 6, 20, 0.7), 0 4px 20px rgba(15, 20, 50, 0.45);
+        border: 1px solid rgba(90, 106, 255, 0.18);
+        display: flex;
+        flex-direction: column;
+        gap: 22px;
+      }
+      .heading {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+      }
+      .title-wrap {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+      }
+      .brand-icon {
+        display: inline-flex;
+        width: 38px;
+        height: 38px;
+        border-radius: 14px;
+        background: linear-gradient(135deg, #5662ff, #7ed8ff);
+        justify-content: center;
+        align-items: center;
+        box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.16),
+          0 10px 20px rgba(110, 124, 248, 0.55);
+      }
+      .brand-icon svg {
+        width: 20px;
+        height: 20px;
+        stroke: #fefefe;
+      }
+      h3 {
+        font-size: 22px;
+        font-weight: 600;
+        letter-spacing: 0.08em;
+        color: #c5d7ff;
+        margin: 0;
+        text-shadow: 0 6px 14px rgba(44, 58, 140, 0.65);
+      }
+      .tagline {
+        font-size: 13px;
+        letter-spacing: 0.06em;
+        color: #a1a8d6;
+      }
+      .tagline strong {
+        font-weight: 600;
+        color: #f9fbff;
+      }
+      .control-group {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 18px 0;
+        border-bottom: 1px solid rgba(128, 137, 204, 0.25);
+        cursor: pointer;
+        gap: 18px;
+      }
+      .control-label {
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
+      }
+      .control-label span {
+        font-size: 16px;
+        font-weight: 600;
+        color: #f5f6ff;
+      }
+      .control-label small {
+        font-size: 12px;
+        color: #828cbb;
+      }
+      .switch {
+        position: relative;
+        width: 64px;
+        height: 32px;
+      }
+      .switch input {
+        opacity: 0;
+        width: 0;
+        height: 0;
+      }
+      .slider {
+        position: absolute;
+        cursor: pointer;
+        inset: 0;
+        background: rgba(86, 92, 125, 0.6);
+        border-radius: 9999px;
+        transition: background 0.35s ease, box-shadow 0.35s ease;
+        box-shadow: inset 0 1px 2px rgba(6, 8, 16, 0.4);
+      }
+      .slider::before {
+        content: "";
+        position: absolute;
+        height: 26px;
+        width: 26px;
+        left: 3px;
+        top: 3px;
+        background-color: #0f111f;
+        border-radius: 50%;
+        box-shadow: 0 6px 14px rgba(0, 0, 0, 0.55), inset 0 0 0 1px rgba(255, 255, 255, 0.05);
+        transition: transform 0.35s ease, box-shadow 0.35s ease, background 0.35s ease;
+      }
+      input:checked + .slider {
+        background: linear-gradient(135deg, #5e6bff, #7cede0);
+        box-shadow: 0 10px 24px rgba(90, 107, 226, 0.55);
+      }
+      input:checked + .slider::before {
+        transform: translateX(32px);
+        background: #fefefe;
+        box-shadow: 0 6px 12px rgba(94, 107, 255, 0.35);
+      }
+      .switch:focus-within .slider {
+        outline: 2px solid rgba(94, 107, 255, 0.8);
+        outline-offset: 4px;
+      }
+      .footer {
+        font-size: 11px;
+        text-transform: uppercase;
+        letter-spacing: 0.3em;
+        color: #7f8bca;
+        text-align: right;
+      }
+      .footer strong {
+        color: #cdd5ff;
+        font-weight: 600;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="surface">
+      <div class="heading">
+        <div class="title-wrap">
+          <span class="brand-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke-width="2">
+              <path
+                d="M12 3l8.5 4v6c0 3.866-3.582 7-8 7s-8-3.134-8-7V7L12 3z"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              ></path>
+              <path
+                d="M9 12l2 2 4-4"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              ></path>
+            </svg>
+          </span>
+          <h3>VCHOP</h3>
+        </div>
+        <p class="tagline">
+          <strong>Your CGPA is your business.</strong> Period. ~ by sodiumcyanide
+        </p>
+      </div>
+      <label class="control-group" for="darkModeToggle">
+        <span class="control-label">
+          <span>Dark Mode</span>
+          <small>Protect your eyes while you protect privacy.</small>
+        </span>
+        <span class="switch">
+          <input type="checkbox" id="darkModeToggle" />
+          <span class="slider"></span>
+        </span>
+      </label>
+    </div>
+    <script src="popup.js"></script>
+  </body>
+</html>
+

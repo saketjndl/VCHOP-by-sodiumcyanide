@@ -1,0 +1,51 @@
+{
+  "manifest_version": 3,
+  "name": "VCHOP",
+  "version": "1.0.0",
+  "description": "Blocks CGPA data requests on VTOP and adds a user-controlled dark mode.",
+  "permissions": [
+    "declarativeNetRequest",
+    "storage",
+    "scripting",
+    "activeTab"
+  ],
+  "host_permissions": [
+    "*://vtop.vitbhopal.ac.in/*"
+  ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "VCHOP",
+    "default_icon": {
+      "16": "icons/VCHOP.png",
+      "32": "icons/VCHOP.png",
+      "48": "icons/VCHOP.png"
+    }
+  },
+  "icons": {
+    "16": "icons/VCHOP.png",
+    "32": "icons/VCHOP.png",
+    "48": "icons/VCHOP.png",
+    "128": "icons/VCHOP.png"
+  },
+  "declarative_net_request": {
+    "rule_resources": [
+      {
+        "id": "ruleset_1",
+        "enabled": true,
+        "path": "rules.json"
+      }
+    ]
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "*://vtop.vitbhopal.ac.in/vtop/*"
+      ],
+      "js": [
+        "content.js"
+      ],
+      "run_at": "document_start"
+    }
+  ]
+}
+
